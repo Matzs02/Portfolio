@@ -1,0 +1,662 @@
+/* =========================
+   ZÁKLAD
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #383838;
+    background: #fffdf9;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HLAVIČKA
+========================= */
+
+header {
+    background: #fffdf9;
+    border-bottom: 1px solid #e7e2da;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+
+    min-height: 72px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    color: #53664d;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #444;
+    font-size: 14px;
+
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #718767;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-button {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: #53664d;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   ÚVOD
+========================= */
+
+.hero {
+    max-width: 1100px;
+    margin: 65px auto 100px;
+
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: 1fr 430px;
+
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.overline {
+    color: #75896d;
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 530px;
+
+    font-family: Georgia, serif;
+    font-size: 52px;
+    line-height: 1.1;
+
+    color: #405039;
+
+    margin-bottom: 22px;
+}
+
+.hero-text > p:not(.overline) {
+    max-width: 500px;
+
+    color: #6c6c6c;
+
+    margin-bottom: 27px;
+}
+
+.hero-image img {
+    width: 430px;
+    height: 470px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+
+/* =========================
+   TLAČÍTKO
+========================= */
+
+.button {
+    display: inline-block;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 12px 23px;
+
+    background: #718767;
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #5e7355;
+}
+
+
+/* =========================
+   SEKCE
+========================= */
+
+.section {
+    max-width: 1100px;
+    margin: 110px auto;
+
+    padding: 0 25px;
+}
+
+.section-heading {
+    max-width: 620px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.section-heading h2,
+.about-text h2,
+.contact-info h2 {
+    font-family: Georgia, serif;
+    color: #405039;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    color: #777;
+}
+
+
+/* =========================
+   KVĚTINY
+========================= */
+
+.flowers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.flower-card {
+    background: white;
+
+    border: 1px solid #e5e0d8;
+    border-radius: 4px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.flower-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+}
+
+.flower-card img {
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 21px;
+}
+
+.card-content h3 {
+    font-family: Georgia, serif;
+    color: #405039;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #707070;
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.card-content strong {
+    color: #718767;
+    font-size: 14px;
+}
+
+
+/* =========================
+   O NÁS
+========================= */
+
+.about {
+    display: grid;
+    grid-template-columns: 430px 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.about-image img {
+    width: 430px;
+    height: 370px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+}
+
+.about-text h2 {
+    font-size: 36px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+.about-text p:not(.overline) {
+    color: #6c6c6c;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SLUŽBY
+========================= */
+
+.services-section {
+    background: #f4f1e9;
+
+    max-width: none;
+
+    padding: 70px max(25px, calc((100% - 1050px) / 2));
+}
+
+.services {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+}
+
+.service {
+    border-top: 1px solid #cfc8bb;
+
+    padding-top: 20px;
+}
+
+.service-number {
+    color: #7b8e73;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-family: Georgia, serif;
+
+    color: #405039;
+
+    font-size: 21px;
+
+    margin-bottom: 9px;
+}
+
+.service p {
+    color: #696969;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.contact-info {
+    max-width: 470px;
+}
+
+.contact-info h2 {
+    font-size: 37px;
+    margin-bottom: 18px;
+}
+
+.contact-info > p:not(.overline) {
+    color: #6d6d6d;
+
+    margin-bottom: 30px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.details div {
+    display: flex;
+    flex-direction: column;
+}
+
+.details strong {
+    color: #405039;
+
+    font-size: 14px;
+}
+
+.details span {
+    color: #6d6d6d;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FORMULÁŘ
+========================= */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.contact-form label {
+    color: #4d4d4d;
+
+    font-size: 13px;
+
+    margin-top: 7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    border: 1px solid #d8d3ca;
+    border-radius: 3px;
+
+    background: white;
+
+    padding: 12px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #879b7d;
+}
+
+.contact-form textarea {
+    height: 140px;
+
+    resize: vertical;
+}
+
+.contact-form .button {
+    margin-top: 10px;
+}
+
+#formMessage {
+    min-height: 20px;
+
+    color: #718767;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PATIČKA
+========================= */
+
+footer {
+    background: #405039;
+
+    color: white;
+
+    padding: 32px 25px;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.footer-logo {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+    font-weight: bold;
+
+    margin-bottom: 4px;
+}
+
+.footer-inner p {
+    font-size: 13px;
+
+    opacity: 0.85;
+}
+
+
+/* =========================
+   MOBIL
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+        right: 0;
+
+        background: #fffdf9;
+
+        border-bottom: 1px solid #e7e2da;
+
+        padding: 10px 25px;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid #eee9e1;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+
+        padding: 13px 0;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        margin-top: 45px;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .hero-text {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-image {
+        margin: auto;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 430px;
+
+        height: 350px;
+    }
+
+
+    .section {
+        margin: 80px auto;
+    }
+
+
+    .flowers {
+        grid-template-columns: 1fr;
+
+        max-width: 430px;
+
+        margin: auto;
+    }
+
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .about-image {
+        margin: auto;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 430px;
+
+        height: 320px;
+    }
+
+
+    .services-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+
+        max-width: 430px;
+    }
+
+
+    .contact {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+}
