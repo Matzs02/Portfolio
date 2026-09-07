@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro U Lípy - restaurace</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <header class="hlavicka" id="hlavicka">
+        <div class="obal">
+            <a href="#" class="logo">U <em>Lípy</em></a>
+
+            <button class="hamburger" id="hamburger" aria-label="Otevřít menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navigace" id="navigace">
+                <ul>
+                    <li><a href="#pribeh" data-nav>O nás</a></li>
+                    <li><a href="#menu" data-nav>Menu</a></li>
+                    <li><a href="#reference" data-nav>Reference</a></li>
+                    <li><a href="#doba" data-nav>Otevírací doba</a></li>
+                    <li><a href="#rezervace" data-nav>Rezervace</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="obal">
+                <div class="reveal">
+                    <span class="eyebrow">Bistro se srdcem v Praze</span>
+                    <h1>Kuchyně, která ctí roční období</h1>
+                    <p>
+                        Vaříme z toho, co právě dozrává na trhu, a servírujeme to pod korunou staré lípy na naší
+                        zahrádce. Žádné zbytečnosti na talíři, jen chuť, na které záleží.
+                    </p>
+                    <div class="tlacitka">
+                        <a href="#menu" class="tlacitko tlacitko--plne">Zobrazit menu</a>
+                        <a href="#rezervace" class="tlacitko tlacitko--obrys">Rezervovat stůl</a>
+                    </div>
+                </div>
+
+                <div class="hero-ilustrace reveal">
+                    <img src="rest.jpg" alt="Interiér restaurace U Lípy">
+                </div>
+            </div>
+        </section>
+
+        <section class="pribeh sekce" id="pribeh">
+            <div class="obal">
+                <div class="pribeh-vizual reveal">
+                    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <img src="jidlo.webp" width="3500vw">
+                    </svg>
+                </div>
+
+                <div class="reveal">
+                    <span class="eyebrow">Náš příběh</span>
+                    <h2>Od rodinné zahrádky k jídelnímu lístku</h2>
+                    <p>Bistro U Lípy vzniklo v roce 2016 z touhy vařit poctivě a bez kompromisů. Zelenina a bylinky rostou přímo na naší zahrádce, maso a ryby vybíráme od farmářů, které osobně známe.</p>
+                    <p>Jídelní lístek se mění s ročním obdobím. To, co dnes najdete na talíři, zítra může vypadat úplně jinak. Věříme, že nejlepší chuť má jídlo, které respektuje svůj čas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu sekce" id="menu">
+            <div class="obal">
+                <div class="menu-nadpis reveal">
+                    <span class="eyebrow">Jídelní lístek</span>
+                    <h2>Co dnes vaříme</h2>
+                    <p>Výběr z aktuální sezónní nabídky. Kompletní lístek včetně alergenů ukážeme přímo na místě.</p>
+                </div>
+
+                <div class="menu-taby">
+                    <button class="menu-tab-tlacitko aktivni" data-cil="predkrmy">Předkrmy</button>
+                    <button class="menu-tab-tlacitko" data-cil="hlavni">Hlavní chody</button>
+                    <button class="menu-tab-tlacitko" data-cil="dezerty">Dezerty</button>
+                    <button class="menu-tab-tlacitko" data-cil="napoje">Nápoje</button>
+                </div>
+
+                <div class="menu-panel aktivni" id="predkrmy">
+                    <div class="menu-polozky">
+                        <div class="menu-polozka"><span class="nazev">Cibulačka s toustem</span><span class="tecky"></span><span class="cena">89 Kč</span><span class="popis">Karamelizovaná cibule, tymián, gratinovaný sýr</span></div>
+                        <div class="menu-polozka"><span class="nazev">Tatarák z candáta</span><span class="tecky"></span><span class="cena">175 Kč</span><span class="popis">Kapary, šalotka, domácí chléb</span></div>
+                        <div class="menu-polozka"><span class="nazev">Letní salát</span><span class="tecky"></span><span class="cena">135 Kč</span><span class="popis">Kozí sýr, meruňky, pražené mandle</span></div>
+                        <div class="menu-polozka"><span class="nazev">Šťouchaný hrášek</span><span class="tecky"></span><span class="cena">115 Kč</span><span class="popis">Máta, křupavá slanina, žloutek</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-panel" id="hlavni">
+                    <div class="menu-polozky">
+                        <div class="menu-polozka"><span class="nazev">Kachní prsa</span><span class="tecky"></span><span class="cena">345 Kč</span><span class="popis">Pečená řepa, jus z portského, bramborové pyré</span></div>
+                        <div class="menu-polozka"><span class="nazev">Rizoto se zeleninou</span><span class="tecky"></span><span class="cena">245 Kč</span><span class="popis">Sezónní zelenina, parmazán, bazalkový olej</span></div>
+                        <div class="menu-polozka"><span class="nazev">Grilovaný candát</span><span class="tecky"></span><span class="cena">315 Kč</span><span class="popis">Fenyklové pyré, citronové beurre blanc</span></div>
+                        <div class="menu-polozka"><span class="nazev">Hovězí líčka</span><span class="tecky"></span><span class="cena">365 Kč</span><span class="popis">Červené víno, celerové pyré, pražené lískové ořechy</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-panel" id="dezerty">
+                    <div class="menu-polozky">
+                        <div class="menu-polozka"><span class="nazev">Jablečný závin</span><span class="tecky"></span><span class="cena">95 Kč</span><span class="popis">Skořice, rozinky, vanilkový crème anglaise</span></div>
+                        <div class="menu-polozka"><span class="nazev">Čokoládový fondant</span><span class="tecky"></span><span class="cena">115 Kč</span><span class="popis">Tekuté jádro, malinové coulis</span></div>
+                        <div class="menu-polozka"><span class="nazev">Panna cotta</span><span class="tecky"></span><span class="cena">99 Kč</span><span class="popis">Lesní ovoce, bazalka</span></div>
+                        <div class="menu-polozka"><span class="nazev">Tvarohový koláč</span><span class="tecky"></span><span class="cena">89 Kč</span><span class="popis">Meruňky, drobenka</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-panel" id="napoje">
+                    <div class="menu-polozky">
+                        <div class="menu-polozka"><span class="nazev">Domácí limonáda</span><span class="tecky"></span><span class="cena">65 Kč</span><span class="popis">Sezónní ovoce a bylinky ze zahrádky</span></div>
+                        <div class="menu-polozka"><span class="nazev">Filtrovaná káva</span><span class="tecky"></span><span class="cena">59 Kč</span><span class="popis">Pražírna Bio-Zrno, alternativní příprava</span></div>
+                        <div class="menu-polozka"><span class="nazev">Moravské víno 1 dcl</span><span class="tecky"></span><span class="cena">79 Kč</span><span class="popis">Dle aktuální nabídky sommeliéra</span></div>
+                        <div class="menu-polozka"><span class="nazev">Řemeslné pivo 0,3 l</span><span class="tecky"></span><span class="cena">55 Kč</span><span class="popis">Nefiltrovaný ležák z malého pivovaru</span></div>
+                    </div>
+                </div>
+
+                <div class="speciality-mrizka">
+                    <div class="specialita reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2C8 6 6 11 6 15a6 6 0 0012 0c0-4-2-9-6-13z"></path></svg>
+                        <h3>Sezónní suroviny</h3>
+                        <p>Nakupujeme denně na trhu a od místních farmářů, ne z velkoskladu.</p>
+                    </div>
+                    <div class="specialita reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+                        <h3>Vaříme na počkání</h3>
+                        <p>Žádné předpřipravené polotovary, vše vzniká až po vaší objednávce.</p>
+                    </div>
+                    <div class="specialita reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 12h16M4 6h16M4 18h10"></path></svg>
+                        <h3>Lístek na míru</h3>
+                        <p>Rádi upravíme chod podle alergií nebo stravovacích preferencí.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reference sekce" id="reference">
+            <div class="obal">
+                <div class="reference-nadpis reveal">
+                    <span class="eyebrow">Co říkají hosté</span>
+                    <h2>Reference</h2>
+                </div>
+
+                <div class="reference-slider" id="reference-slider">
+                    <div class="reference-citace aktivni">
+                        <blockquote>„Kachna byla naprosto famózní a obsluha se chovala, jako bychom k nim chodili roky. Určitě se vrátíme.“</blockquote>
+                        <cite>— Petra K.</cite>
+                    </div>
+                    <div class="reference-citace">
+                        <blockquote>„Zahrádka pod lípou je v létě kouzelná a lístek se opravdu mění. Byli jsme tu třikrát a pokaždé jsme ochutnali něco jiného.“</blockquote>
+                        <cite>— Martin S.</cite>
+                    </div>
+                    <div class="reference-citace">
+                        <blockquote>„Oceňuji, že dokázali upravit celé menu kvůli mé alergii, a přitom to pořád chutnalo skvěle.“</blockquote>
+                        <cite>— Jana H.</cite>
+                    </div>
+
+                    <div class="reference-ovladani">
+                        <button class="reference-sipka" id="reference-predchozi" aria-label="Předchozí reference">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg>
+                        </button>
+                        <div class="reference-tecky" id="reference-tecky"></div>
+                        <button class="reference-sipka" id="reference-dalsi" aria-label="Další reference">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-pas sekce" id="doba">
+            <div class="obal">
+                <div class="reveal">
+                    <span class="eyebrow">Kdy nás najdete</span>
+                    <h2>Otevírací doba</h2>
+                    <div class="radek-doby"><span>Pondělí – Čtvrtek</span><span>11:30 – 22:00</span></div>
+                    <div class="radek-doby"><span>Pátek – Sobota</span><span>11:30 – 23:00</span></div>
+                    <div class="radek-doby"><span>Neděle</span><span>11:30 – 21:00</span></div>
+                </div>
+
+                <div class="reveal">
+                    <span class="eyebrow">Kde nás najdete</span>
+                    <h2>Kontakt</h2>
+                    <address>
+                        Lipová 12, 120 00 Praha 2<br>
+                        <a class="kontakt-odkaz" href="tel:+420777123456">+420 777 123 456</a><br>
+                        <a class="kontakt-odkaz" href="mailto:stul@ulipy.cz">stul@ulipy.cz</a>
+                    </address>
+                    <a href="#rezervace" class="tlacitko tlacitko--obrys" style="border-color:var(--barva-akcent); color:var(--barva-text-svetla);">Rezervovat stůl</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="rezervace sekce" id="rezervace">
+            <div class="obal">
+                <div class="rezervace-text reveal">
+                    <span class="eyebrow">Rezervace</span>
+                    <h2>Zarezervujte si stůl</h2>
+                    <p>Na víkendy doporučujeme rezervovat alespoň 3 dny dopředu. Na vyplněný formulář se ozveme do 24 hodin s potvrzením.</p>
+                </div>
+
+                <div class="reveal">
+                    <form class="formular" id="rezervacni-formular" novalidate>
+                        <div class="pole">
+                            <label for="jmeno">Jméno a příjmení</label>
+                            <input type="text" id="jmeno" name="jmeno" required>
+                            <span class="chybova-zprava">Vyplňte prosím jméno.</span>
+                        </div>
+
+                        <div class="pole">
+                            <label for="telefon">Telefon</label>
+                            <input type="tel" id="telefon" name="telefon" required pattern="^[0-9 +]{9,}$">
+                            <span class="chybova-zprava">Zadejte platné telefonní číslo.</span>
+                        </div>
+
+                        <div class="pole">
+                            <label for="datum">Datum</label>
+                            <input type="date" id="datum" name="datum" required>
+                            <span class="chybova-zprava">Vyberte datum rezervace.</span>
+                        </div>
+
+                        <div class="pole">
+                            <label for="pocet">Počet osob</label>
+                            <input type="number" id="pocet" name="pocet" min="1" max="20" value="2" required>
+                            <span class="chybova-zprava">Zadejte počet 1 až 20.</span>
+                        </div>
+
+                        <div class="pole pole-cele">
+                            <label for="poznamka">Poznámka (nepovinné)</label>
+                            <textarea id="poznamka" name="poznamka" placeholder="Alergie, výročí, dětská židlička…"></textarea>
+                        </div>
+
+                        <div class="pole-cele">
+                            <button type="submit" class="tlacitko tlacitko--plne">Odeslat rezervaci</button>
+                        </div>
+                    </form>
+
+                    <div class="formular-uspech skryto" id="formular-uspech">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 7L9 18l-5-5"></path></svg>
+                        <h3>Rezervace odeslána</h3>
+                        <p>Děkujeme, ozveme se vám co nejdřív s potvrzením termínu.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="paticka">
+        <div class="obal">
+            <div class="paticka-sloupec">
+                <a href="#" class="logo">U <em>Lípy</em></a>
+                <p style="margin-top:12px; max-width:32ch; font-size:0.9rem;">Sezónní kuchyně pod korunou staré lípy v srdci Prahy.</p>
+            </div>
+
+            <div class="paticka-sloupec">
+                <h4>Navigace</h4>
+                <ul>
+                    <li><a href="#pribeh">O nás</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#rezervace">Rezervace</a></li>
+                </ul>
+            </div>
+
+            <div class="paticka-sloupec">
+                <h4>Kontakt</h4>
+                <ul>
+                    <li><a href="tel:+420777123456">+420 777 123 456</a></li>
+                    <li><a href="mailto:stul@ulipy.cz">stul@ulipy.cz</a></li>
+                    <li>Lipová 12, Praha 2</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="paticka-spodek">
+            <span>© 2026 Bistro U Lípy</span>
+            <span>Vytvořeno s láskou k dobrému jídlu</span>
+        </div>
+    </footer>
+
+    <button class="nahoru-tlacitko" id="nahoru-tlacitko" aria-label="Přejít nahoru">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+    </button>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navigace = document.getElementById('navigace');
+        const hlavicka = document.getElementById('hlavicka');
+        const nahoruTlacitko = document.getElementById('nahoru-tlacitko');
+
+        hamburger.addEventListener('click', () => {
+            const otevrene = navigace.classList.toggle('otevrena');
+            hamburger.setAttribute('aria-expanded', otevrene);
+        });
+
+        document.querySelectorAll('.navigace a').forEach((odkaz) => {
+            odkaz.addEventListener('click', () => {
+                navigace.classList.remove('otevrena');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            hlavicka.classList.toggle('zmensena', window.scrollY > 60);
+            nahoruTlacitko.classList.toggle('viditelne', window.scrollY > 500);
+        });
+
+        nahoruTlacitko.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        const sekce = document.querySelectorAll('section[id]');
+        const odkazy = document.querySelectorAll('.navigace a[data-nav]');
+
+        const observerNavigace = new IntersectionObserver((zaznamy) => {
+            zaznamy.forEach((zaznam) => {
+                if (zaznam.isIntersecting) {
+                    odkazy.forEach((odkaz) => {
+                        odkaz.classList.toggle('aktivni', odkaz.getAttribute('href') === `#${zaznam.target.id}`);
+                    });
+                }
+            });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+
+        sekce.forEach((polozka) => observerNavigace.observe(polozka));
+
+        document.querySelectorAll('.reveal').forEach((prvek) => {
+            new IntersectionObserver((zaznamy, observer) => {
+                zaznamy.forEach((zaznam) => {
+                    if (zaznam.isIntersecting) {
+                        zaznam.target.classList.add('viditelny');
+                        observer.unobserve(zaznam.target);
+                    }
+                });
+            }, { threshold: 0.15 }).observe(prvek);
+        });
+
+        const tlacitkaZalozek = document.querySelectorAll('.menu-tab-tlacitko');
+        const panelyMenu = document.querySelectorAll('.menu-panel');
+
+        tlacitkaZalozek.forEach((tlacitko) => {
+            tlacitko.addEventListener('click', () => {
+                const cil = tlacitko.dataset.cil;
+
+                tlacitkaZalozek.forEach((t) => {
+                    const aktivni = t === tlacitko;
+                    t.classList.toggle('aktivni', aktivni);
+                    t.setAttribute('aria-selected', aktivni);
+                });
+
+                panelyMenu.forEach((panel) => {
+                    panel.classList.toggle('aktivni', panel.id === cil);
+                });
+            });
+        });
+
+        const citace = document.querySelectorAll('.reference-citace');
+        const teckyKontejner = document.getElementById('reference-tecky');
+        const referenceSlider = document.getElementById('reference-slider');
+        const predchozi = document.getElementById('reference-predchozi');
+        const dalsi = document.getElementById('reference-dalsi');
+        let aktualniIndex = 0;
+        let casovac = null;
+
+        citace.forEach((_, index) => {
+            const tecka = document.createElement('button');
+            tecka.className = 'reference-tecka' + (index === 0 ? ' aktivni' : '');
+            tecka.setAttribute('aria-label', `Zobrazit referenci ${index + 1}`);
+            tecka.addEventListener('click', () => zobrazCitaci(index));
+            teckyKontejner.appendChild(tecka);
+        });
+
+        const tecky = document.querySelectorAll('.reference-tecka');
+
+        function zobrazCitaci(index) {
+            citace[aktualniIndex].classList.remove('aktivni');
+            tecky[aktualniIndex].classList.remove('aktivni');
+
+            aktualniIndex = (index + citace.length) % citace.length;
+
+            citace[aktualniIndex].classList.add('aktivni');
+            tecky[aktualniIndex].classList.add('aktivni');
+        }
+
+        function restartujAutomatickyPosun() {
+            clearInterval(casovac);
+            casovac = setInterval(() => zobrazCitaci(aktualniIndex + 1), 6000);
+        }
+
+        dalsi.addEventListener('click', () => {
+            zobrazCitaci(aktualniIndex + 1);
+            restartujAutomatickyPosun();
+        });
+
+        predchozi.addEventListener('click', () => {
+            zobrazCitaci(aktualniIndex - 1);
+            restartujAutomatickyPosun();
+        });
+
+        referenceSlider.addEventListener('mouseenter', () => clearInterval(casovac));
+        referenceSlider.addEventListener('mouseleave', restartujAutomatickyPosun);
+        restartujAutomatickyPosun();
+
+        const formular = document.getElementById('rezervacni-formular');
+        const zpravaUspech = document.getElementById('formular-uspech');
+
+        formular.addEventListener('submit', (udalost) => {
+            udalost.preventDefault();
+            let platne = true;
+
+            formular.querySelectorAll('input[required], textarea[required]').forEach((pole) => {
+                const ok = pole.checkValidity();
+                pole.classList.toggle('neplatne', !ok);
+                if (!ok) platne = false;
+            });
+
+            if (platne) {
+                formular.classList.add('skryto');
+                zpravaUspech.classList.remove('skryto');
+            } else {
+                formular.querySelector('.neplatne')?.focus();
+            }
+        });
+
+        formular.querySelectorAll('input, textarea').forEach((pole) => {
+            pole.addEventListener('input', () => pole.classList.remove('neplatne'));
+        });
+    </script>
+</body>
+</html>
