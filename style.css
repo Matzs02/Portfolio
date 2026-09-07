@@ -279,7 +279,7 @@ h1 {
    with image 50% and text 50% (alternating sides). */
 .work-list {
   position: relative;
-  left: 50%;
+  left: 32%;
   right: auto;
   margin-left: 0;
   margin-right: 0;
