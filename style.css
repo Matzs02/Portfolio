@@ -266,13 +266,149 @@ h1 {
 
 .project-grid,
 .reference-grid,
-.steps {
+.steps,
+.pricing-grid {
   display: grid;
   gap: 24px;
 }
 
 .project-grid {
   grid-template-columns: 1.25fr 1fr 1fr;
+}
+
+.pricing {
+  padding: 72px 0;
+  background: rgba(228, 213, 200, 0.34);
+}
+
+.pricing-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 28px;
+}
+
+.pricing-note {
+  max-width: 330px;
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px 22px 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 36px rgba(28, 24, 21, 0.12);
+}
+
+.price-card.featured {
+  background: var(--text);
+  color: #fff;
+  border-color: var(--text);
+}
+
+.price-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 8px;
+  background: var(--soft);
+  color: var(--text);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.price-label {
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.featured .price-label { color: #d7b39a; }
+
+.price-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+}
+
+.price-description {
+  min-height: 78px;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.featured .price-description,
+.featured .price-features { color: rgba(255, 255, 255, 0.72); }
+
+.price {
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.featured .price { border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.72); }
+
+.price strong {
+  color: var(--text);
+  font-size: 1.55rem;
+}
+
+.featured .price strong { color: #fff; }
+
+.price-features {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  list-style: none;
+}
+
+.price-features li::before {
+  content: "✓";
+  margin-right: 8px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.featured .price-features li::before { color: #d7b39a; }
+
+.price-button {
+  width: 100%;
+  margin-top: auto;
+  background: transparent;
+  color: var(--text);
+}
+
+.featured .price-button {
+  background: #fff;
+  color: var(--text);
 }
 
 /* Full-bleed alternating work items: each item spans full viewport width,
@@ -517,6 +653,16 @@ blockquote footer {
     grid-template-columns: 1fr;
   }
 
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pricing-head {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .project-card-large { grid-row: auto; }
 
   .footer-inner {
@@ -556,8 +702,13 @@ blockquote footer {
   .about,
   .projects,
   .references,
-  .process {
+  .process,
+  .pricing {
     padding: 48px 0;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 
   .portrait-body {
